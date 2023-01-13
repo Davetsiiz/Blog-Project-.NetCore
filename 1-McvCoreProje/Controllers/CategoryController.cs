@@ -18,13 +18,13 @@ namespace _1_McvCoreProje.Controllers
         public IActionResult Index()
         {
 
-            var values = cm.CategoryListAll();
+            var values = cm.GetList();
             return View(values);
         }
         public IActionResult DeleteCategory(int id)
         {
-            var values = _categoryService.CategoryGetById(id);
-            _categoryService.CategoryDelete(values);
+            var values = _categoryService.TGetById(id);
+            _categoryService.TDelete(values);
             return RedirectToAction("Index");
 
 

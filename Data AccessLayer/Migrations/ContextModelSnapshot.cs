@@ -103,6 +103,28 @@ namespace Data_AccessLayer.Migrations
                     b.ToTable("blogs");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.BlogRayting", b =>
+                {
+                    b.Property<int>("BlogRaytingID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BlogRaytingID"), 1L, 1);
+
+                    b.Property<int>("BlogID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BlogRaytinCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BlogTotalScore")
+                        .HasColumnType("int");
+
+                    b.HasKey("BlogRaytingID");
+
+                    b.ToTable("blogRaytings");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Category", b =>
                 {
                     b.Property<int>("CategoryId")
@@ -136,6 +158,9 @@ namespace Data_AccessLayer.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentID"), 1L, 1);
 
                     b.Property<int>("BlogId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BlogScore")
                         .HasColumnType("int");
 
                     b.Property<string>("CommentContent")

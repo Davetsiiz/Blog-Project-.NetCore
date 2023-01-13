@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.Blog
+  @*Begin form kullanabilmek için yapıldı*@
+@{
+    ViewData["Title"] = "BlogAdd";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+<h2>Yeni Blog Girişi</h2>
+<br />
+@using (Html.BeginForm("BlogAdd", "Blog", FormMethod.Post))
+{
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x=>x.BlogTitle,new {@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogTitle,"", new {@class="text-danger"})
+    <br />
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.cv,new {@class="form-control"})
+    
+  @*  <br />
+    @await (Component.InvokeAsync("CategoryDlinBlog"))*@
+    <br />
+    @Html.Label("Blog Resmi")
+    @Html.TextBoxFor(x=>x.BlogImage,new {@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogImage,"", new {@class="text-danger"})
+    <br />
+    @Html.Label("İçerik")
+    @Html.TextAreaFor(x=>x.BlogContent,15,3,new {@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogContent,"", new {@class="text-danger"})
+    <br />
+    
+    <button type="submit" class="btn btn-primary submit mb-4">Blog Ekle</button>
+}
+

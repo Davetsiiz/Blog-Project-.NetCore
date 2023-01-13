@@ -9,7 +9,7 @@ namespace AMvcCoreProjeKampi.ViewComponenets.Category
 		CategoryManager cm = new CategoryManager(new EfCategoryDal());
 		public IViewComponentResult Invoke()
 		{
-			var values = cm.CategoryListAll();
+			var values = cm.GetList();
 			return View(values);
 		}
 	}

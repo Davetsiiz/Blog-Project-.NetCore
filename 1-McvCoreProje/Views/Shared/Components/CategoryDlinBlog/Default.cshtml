@@ -1,0 +1,7 @@
+﻿@model AMvcCoreProjeKampi.Models.ViewModel.CategoryDLinBlog
+<form asp-controller="BlogController" asp-action="BlogAdd" method="post" >
+<div>
+    <label class="form-label">Kategori</label>
+    <select class="form-control" asp-items="Model.CategorySelectList" ></select>
+</div>
+</form>

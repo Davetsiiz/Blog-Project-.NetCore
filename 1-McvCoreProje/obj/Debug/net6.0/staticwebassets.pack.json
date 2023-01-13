@@ -101,6 +101,10 @@
       "PackagePath": "staticwebassets\\CoreBlogTema\\404\\astronaut.png"
     },
     {
+      "Id": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\CoreBlogTema\\404\\bg_purple.png",
+      "PackagePath": "staticwebassets\\CoreBlogTema\\404\\bg_purple.png"
+    },
+    {
       "Id": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\CoreBlogTema\\404\\duck.png",
       "PackagePath": "staticwebassets\\CoreBlogTema\\404\\duck.png"
     },
@@ -123,6 +127,14 @@
     {
       "Id": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\CoreBlogTema\\Images\\Hakkımızda_2.jpg",
       "PackagePath": "staticwebassets\\CoreBlogTema\\Images\\Hakkımızda_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\CoreBlogTema\\Images\\Logo.ico",
+      "PackagePath": "staticwebassets\\CoreBlogTema\\Images\\Logo.ico"
+    },
+    {
+      "Id": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\CoreBlogTema\\Images\\Logo.png",
+      "PackagePath": "staticwebassets\\CoreBlogTema\\Images\\Logo.png"
     },
     {
       "Id": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\CoreBlogTema\\Images\\eme.ico",

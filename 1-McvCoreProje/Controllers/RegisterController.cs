@@ -27,7 +27,7 @@ namespace AMvcCoreProjeKampi.Controllers
 			{
                 p.WriterStatus = true;
                 p.WriterAbout = "Deneme ve Test";
-                wm.WriterInsert(p);
+                wm.TAdd(p);
                 return RedirectToAction("Index", "Blog");
             }
 			else

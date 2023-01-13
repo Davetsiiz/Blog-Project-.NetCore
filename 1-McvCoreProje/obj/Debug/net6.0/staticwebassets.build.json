@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lO+Jsj1YT3QZmr31Z0h+wICE/pWRsjltPkx8bG4HUAo=",
+  "Hash": "aTxMygnMV2owWndoobCNkVIYtBzCFVSuO9Z/BPJlLz8=",
   "Source": "AMvcCoreProjeKampi",
   "BasePath": "_content/AMvcCoreProjeKampi",
   "Mode": "Default",
@@ -442,6 +442,23 @@
       "OriginalItemSpec": "wwwroot\\CoreBlogTema\\404\\astronaut.png"
     },
     {
+      "Identity": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\CoreBlogTema\\404\\bg_purple.png",
+      "SourceId": "AMvcCoreProjeKampi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\",
+      "BasePath": "_content/AMvcCoreProjeKampi",
+      "RelativePath": "CoreBlogTema/404/bg_purple.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CoreBlogTema\\404\\bg_purple.png"
+    },
+    {
       "Identity": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\CoreBlogTema\\404\\duck.png",
       "SourceId": "AMvcCoreProjeKampi",
       "SourceType": "Discovered",
@@ -593,6 +610,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CoreBlogTema\\Images\\Hakkımızda_2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\CoreBlogTema\\Images\\Logo.ico",
+      "SourceId": "AMvcCoreProjeKampi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\",
+      "BasePath": "_content/AMvcCoreProjeKampi",
+      "RelativePath": "CoreBlogTema/Images/Logo.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CoreBlogTema\\Images\\Logo.ico"
+    },
+    {
+      "Identity": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\CoreBlogTema\\Images\\Logo.png",
+      "SourceId": "AMvcCoreProjeKampi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\",
+      "BasePath": "_content/AMvcCoreProjeKampi",
+      "RelativePath": "CoreBlogTema/Images/Logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CoreBlogTema\\Images\\Logo.png"
     },
     {
       "Identity": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\CoreBlogTema\\web\\about.html",

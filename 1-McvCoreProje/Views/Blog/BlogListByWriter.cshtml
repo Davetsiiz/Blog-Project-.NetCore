@@ -1,0 +1,68 @@
+﻿@using EntityLayer.Concrete
+@model List<Blog>
+@{
+    ViewData["Title"] = "BlogListByWriter";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+<h1>Yazarın Blogları</h1>
+
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Tarih</th>
+        <th class="span">Kategori</th>
+        <th>Durum</th>
+        <th class="text-danger"><u>Sil</u></th>
+        <th class="text-info"><u>Düzenle</u></th>
+    </tr>
+    @foreach (var item in Model)
+        {
+
+            string sta = "";
+            if (item.BlogStatus == true)
+            {
+                sta = "Aktif";
+            }
+            else if (item.BlogStatus == false)
+            {
+                sta = "Pasif";
+            }
+            else
+            {
+                sta = "";
+            }
+            string renk = "";
+            if (item.CategoryId % 3 == 1)
+            {
+                renk = "color:red;";
+            }
+            else if (item.CategoryId % 3 == 2)
+            {
+                renk = "color:darkblue;";
+            }
+            else if (item.CategoryId % 3 == 0)
+            {
+                renk = "color:saddlebrown;";
+            }
+            else
+            {
+                renk = "color:blueviolet;";
+            }
+            <tr>
+                <td>@item.BlogId</td>
+                <td>@item.BlogTitle</td>
+                <td>@(((DateTime)item.BlogDate).ToString("dd.MM.yyyy"))</td>
+                <td><span style="@renk"><u>@item.Category.CategoryName</u></span></td>
+                <td>@sta</td>
+                <td><a href="/Blog/BlogDelete/@item.BlogId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Blog/BlogEdit/@item.BlogId" class="btn btn-info">Düzenle</a></td>
+            </tr>
+        }
+</table>
+<td><a href="/Blog/BlogAdd" class="btn btn-primary">Yeni Başlık Ekle</a></td>
+
+
+
