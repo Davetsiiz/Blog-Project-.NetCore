@@ -1,10 +1,5 @@
 ﻿using EntityLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data_AccessLayer.Concrete
 {
@@ -14,6 +9,21 @@ namespace Data_AccessLayer.Concrete
         {
             optionsBuilder.UseSqlServer("Data Source=DESKTOP-HKAH8F2;Initial Catalog=CoreMVCKampProjeDB;Integrated Security=True");
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Message2>()
+                .HasOne(x => x.SenderUser)
+                .WithMany(y => y.WriterSender)
+                .HasForeignKey(z=>z.SenderID)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Message2>()
+                 .HasOne(x => x.RecieverUser)
+                .WithMany(y => y.WriterReciever)
+                .HasForeignKey(z => z.ReceiverID)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+        }
+
         public DbSet<About> abouts { get; set; }
         public DbSet<Blog> blogs { get; set; }
         public DbSet<Category> categories { get; set; }
@@ -22,5 +32,9 @@ namespace Data_AccessLayer.Concrete
         public DbSet<Writer> writers { get; set; }
         public DbSet<NewsLetter> newsLetters { get; set; }
         public DbSet<BlogRayting> blogRaytings { get; set; }
+        public DbSet<Notification> notifications { get; set; }
+        public DbSet<Message> messages { get; set; }
+        public DbSet<Message2> messages2 { get; set; }
+
     }
 }

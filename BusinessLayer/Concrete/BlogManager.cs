@@ -39,7 +39,7 @@ namespace BusinessLayer.Concrete
 		}
 		public List<Blog> GetBlogListByWriter(int id)
 		{
-			return _blogDal.GetListAll(x=>x.WriterID==id);
+			return _blogDal.GetListAll(x=>x.WriterID==id).TakeLast(3).ToList();
 		}
 
         public void TAdd(Blog t)

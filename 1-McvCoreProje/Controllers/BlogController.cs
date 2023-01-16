@@ -76,7 +76,7 @@ namespace _1_McvCoreProje.Controllers
                 p.BlogDate = DateTime.Parse(DateTime.Now.ToString());
                 p.BlogStatus = true;
                 p.WriterID = 1;
-                p.CategoryId=ViewBag.
+                
                 bm.TAdd(p);
                 return RedirectToAction("BlogListByWriter", "Blog");
             }

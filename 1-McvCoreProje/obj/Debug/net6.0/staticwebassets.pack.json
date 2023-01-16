@@ -417,6 +417,14 @@
       "PackagePath": "staticwebassets\\CoreBlogTema\\web\\webfonts\\fa-solid-900.woff2"
     },
     {
+      "Id": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\WriterImageFile\\aa83374a-a213-4c86-ae13-65e3b7dc38c0.jpg",
+      "PackagePath": "staticwebassets\\WriterImageFile\\aa83374a-a213-4c86-ae13-65e3b7dc38c0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\WriterImageFile\\f52789f3-8c62-4e18-9b15-fb2cf1c93043.jpeg",
+      "PackagePath": "staticwebassets\\WriterImageFile\\f52789f3-8c62-4e18-9b15-fb2cf1c93043.jpeg"
+    },
+    {
       "Id": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

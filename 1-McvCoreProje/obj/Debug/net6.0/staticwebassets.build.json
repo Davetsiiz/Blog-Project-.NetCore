@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aTxMygnMV2owWndoobCNkVIYtBzCFVSuO9Z/BPJlLz8=",
+  "Hash": "6mJRcwdHmTAYrLmdcFG5v+pnGVy4uPwtCtzDjINes5U=",
   "Source": "AMvcCoreProjeKampi",
   "BasePath": "_content/AMvcCoreProjeKampi",
   "Mode": "Default",
@@ -5438,6 +5438,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\writer\\screenshot.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\WriterImageFile\\aa83374a-a213-4c86-ae13-65e3b7dc38c0.jpg",
+      "SourceId": "AMvcCoreProjeKampi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\",
+      "BasePath": "_content/AMvcCoreProjeKampi",
+      "RelativePath": "WriterImageFile/aa83374a-a213-4c86-ae13-65e3b7dc38c0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\WriterImageFile\\aa83374a-a213-4c86-ae13-65e3b7dc38c0.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\WriterImageFile\\f52789f3-8c62-4e18-9b15-fb2cf1c93043.jpeg",
+      "SourceId": "AMvcCoreProjeKampi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\1-McvCoreProje\\wwwroot\\",
+      "BasePath": "_content/AMvcCoreProjeKampi",
+      "RelativePath": "WriterImageFile/f52789f3-8c62-4e18-9b15-fb2cf1c93043.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\WriterImageFile\\f52789f3-8c62-4e18-9b15-fb2cf1c93043.jpeg"
     }
   ]
 }

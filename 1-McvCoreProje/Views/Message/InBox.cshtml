@@ -1,0 +1,76 @@
+﻿@using EntityLayer.Concrete
+@model List<Message2>
+@{
+    ViewData["Title"] = "InBox";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+<div class="col-lg-12 grid-margin stretch-card ">
+    <div class="card">
+        <h1 class="card-title " style="text-align:center ">Gelen Kutusu</h1>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+
+                    <tr>
+                        <th>#</th>
+                        <th>Görsel</th>
+                        <th>Başlık</th>
+                        <th>Tarih</th>
+                        <th class="span">Kimden</th>
+                        <th>Durum</th>
+                        <th class="text-danger"><u>Sil</u></th>
+                        <th class="text-info"><u>Oku</u></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+                        string sta = "";
+                        if (item.MessageStatus == true)
+                        {
+                            sta = "Aktif";
+                        }
+                        else if (item.MessageStatus == false)
+                        {
+                            sta = "Pasif";
+                        }
+                        else
+                        {
+                            sta = "";
+                        }
+                        string renk = "";
+                        if (item.SenderID % 3 == 1)
+                        {
+                            renk = "color:red;";
+                        }
+                        else if (item.SenderID % 3 == 2)
+                        {
+                            renk = "color:darkblue;";
+                        }
+                        else if (item.SenderID % 3 == 0)
+                        {
+                            renk = "color:saddlebrown;";
+                        }
+                        else
+                        {
+                            renk = "color:blueviolet;";
+                        }
+                        <tr>
+                            <td>@item.MessageId</td>
+                            <td><img src="@item.SenderUser.WriterImage"></img></td>
+                            <td>@item.Subject</td>
+                            <td>@(((DateTime)item.MessageDate).ToString("dd.MM.yyyy"))</td>
+                            <td><a href="/Writer/WriterProfile/@item.SenderUser.WriterID"><span style="@renk"><u>@item.SenderUser.WriterName</u></span></a></td>
+                            <td>@sta</td>
+                            <td><a href="/Message/MessageDelete/@item.MessageId" class="btn btn-danger">Sil</a></td>
+                            <td><a href="/Message/MessageRead/@item.MessageId" class="btn btn-info">Oku</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
