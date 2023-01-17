@@ -2,6 +2,7 @@
 using Data_AccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AMvcCoreProjeKampi.Controllers
 {
@@ -14,6 +15,14 @@ namespace AMvcCoreProjeKampi.Controllers
             int id = 1;
 
             var values = mm.GetInboxListByWriter(id);
+            return View(values);
+        }
+
+        [AllowAnonymous]
+        public IActionResult MessageDetails(int id)
+        {
+            
+            var values = mm.TGetById(id);
             return View(values);
         }
     }

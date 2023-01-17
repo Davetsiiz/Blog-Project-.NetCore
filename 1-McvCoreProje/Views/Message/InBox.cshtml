@@ -10,7 +10,7 @@
     <div class="card">
         <h1 class="card-title " style="text-align:center ">Gelen Kutusu</h1>
         <div class="card-body">
-            <table class="table table-striped">
+            <table class="table table-hover">
                 <thead>
 
                     <tr>
@@ -58,15 +58,15 @@
                         {
                             renk = "color:blueviolet;";
                         }
-                        <tr>
-                            <td>@item.MessageId</td>
+                        <tr >
+                            <td >@item.MessageId</td>
                             <td><img src="@item.SenderUser.WriterImage"></img></td>
                             <td>@item.Subject</td>
                             <td>@(((DateTime)item.MessageDate).ToString("dd.MM.yyyy"))</td>
                             <td><a href="/Writer/WriterProfile/@item.SenderUser.WriterID"><span style="@renk"><u>@item.SenderUser.WriterName</u></span></a></td>
                             <td>@sta</td>
                             <td><a href="/Message/MessageDelete/@item.MessageId" class="btn btn-danger">Sil</a></td>
-                            <td><a href="/Message/MessageRead/@item.MessageId" class="btn btn-info">Oku</a></td>
+                            <td><a href="/Message/MessageDetails/@item.MessageId" class="btn btn-info">Oku</a></td>
                         </tr>
                     }
                 </tbody>

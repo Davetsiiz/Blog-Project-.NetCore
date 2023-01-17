@@ -1,0 +1,21 @@
+﻿@model EntityLayer.Concrete.Message2
+@{
+    ViewData["Title"] = "MessageDetails";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>Gelen Mesaj</h1>
+
+@*@Html.Label("ID")*@
+@Html.HiddenFor(x=>x.MessageId, new {@class="form-control"})
+<br />
+@Html.Label("Başlık")
+@Html.TextBoxFor(x=>x.Subject, new {@class="form-control",@readonly=true})
+<br />
+@Html.Label("Tarih")
+@Html.TextBoxFor(x=>x.MessageDate,"{0:dd/MM/yyyy  HH.MM}",new {@class="form-control",@readonly=true})
+<br />
+@Html.Label("Mesaj")
+@Html.TextAreaFor(x=>x.MessageDetails, new {@class="form-control",@readonly=true } )
+<br />
+<a href="/Dashboard/Index/" class="btn btn-danger">Ana Sayfaya Dön</a>
