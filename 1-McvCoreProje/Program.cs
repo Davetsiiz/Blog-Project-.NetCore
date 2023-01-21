@@ -32,7 +32,7 @@ builder.Services.AddAuthentication(
     {
         x.LoginPath = "/Login/Index";
     });
-    
+
 
 var app = builder.Build();
 
@@ -53,8 +53,19 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+            name: "areas",
+            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+            );
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+});
 
 app.Run();

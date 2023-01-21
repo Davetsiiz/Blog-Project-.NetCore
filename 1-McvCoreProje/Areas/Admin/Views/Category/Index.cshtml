@@ -1,0 +1,78 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<EntityLayer.Concrete.Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<a href="/Admin/Category/CategoryAdd" class="btn btn-primary">Yeni Kategori</a>
+<br />
+<div class="col-lg-12 grid-margin stretch-card" >
+    <div class="card"  >
+        <div class="card-body">
+            <table class="table table-striped" style="text-align:center" border="1">
+                <tr>
+                    <th colspan="5" style="text-align:center" class="title">AKTİF KATEGORİLER</th>
+                </tr>
+                <tr>
+                    <th>#</th>
+                    <th>Kategori Adı</th>
+                    <th>Pasif Yap</th>
+                    <th>Düzenle</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    if (item.CategoryStatus==true)
+                    {
+                    <tr>
+                        <td>@item.CategoryId</td>
+                        <td>@item.CategoryName</td>
+                            <td><a href="/Admin/Category/CategoryPasif/@item.CategoryId" id="PasifBtn" onclick="return confirm('Pasifleştirmek istdiğinize emin misiniz?');" class="btn btn-outline-danger">Pasif</a></td>
+                        <td><a href="#" class="btn btn-outline-secondary">Düzenle</a></td>
+
+                    </tr>
+                    }
+                }
+            </table>
+            @Html.PagedListPager((IPagedList)Model, page=>Url.Action("Index",new {page}))
+        </div>
+        
+    </div>
+</div>
+<br />
+<br />
+<br />
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+
+        <div class="card-body">
+            <table class="table table-striped" style="text-align:center" border="1">
+                <tr>
+                    <th colspan="5" style="text-align:center" class="title">PASİF KATEGORİLER</th>
+                </tr>
+                <tr>
+                    <th>#</th>
+                    <th>Kategori Adı</th>
+                    <th>Aktif Yap</th>
+                    <th>Düzenle</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    if (item.CategoryStatus == false)
+                    {
+                        <tr>
+                            <td>@item.CategoryId</td>
+                            <td>@item.CategoryName</td>
+                            <td><a href="/Admin/Category/CategoryActive/@item.CategoryId" id="ActiveBtn" onclick="return confirm('Aktifleştimek istdiğinize emin misiniz?');" class="btn btn-outline-primary">Aktif</a></td>
+                            <td><a href="#" class="btn btn-outline-secondary">Düzenle</a></td>
+
+                        </tr>
+                    }
+                }
+            </table>
+            @Html.PagedListPager((IPagedList)Model, page=>Url.Action("Index",new {page}))
+        </div>
+
+    </div>
+</div>

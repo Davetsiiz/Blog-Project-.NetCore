@@ -1,9 +1,10 @@
 ﻿using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data_AccessLayer.Concrete
 {
-    public class Context:DbContext
+    public class Context:IdentityDbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -22,6 +23,8 @@ namespace Data_AccessLayer.Concrete
                 .WithMany(y => y.WriterReciever)
                 .HasForeignKey(z => z.ReceiverID)
                 .OnDelete(DeleteBehavior.ClientSetNull);
+
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<About> abouts { get; set; }
@@ -35,6 +38,7 @@ namespace Data_AccessLayer.Concrete
         public DbSet<Notification> notifications { get; set; }
         public DbSet<Message> messages { get; set; }
         public DbSet<Message2> messages2 { get; set; }
+        public DbSet<Admin> admins { get; set; }
 
     }
 }

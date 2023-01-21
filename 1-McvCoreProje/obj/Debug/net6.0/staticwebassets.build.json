@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "R2OINM67bsz8f/CuUgLn6md8ndWr0tOjpkzjgv6YG9k=",
+  "Hash": "iBM+35lluLNviMC6q4KEhqBHHtmkHHz/rKiNvxEtByc=",
   "Source": "AMvcCoreProjeKampi",
   "BasePath": "_content/AMvcCoreProjeKampi",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\e_mur\\source\\repos\\MvcCoreProje\\BlogApiDemo\\BlogApiDemo.csproj",
+      "Version": 2,
+      "Source": "BlogApiDemo",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "AMvcCoreProjeKampi\\wwwroot",
