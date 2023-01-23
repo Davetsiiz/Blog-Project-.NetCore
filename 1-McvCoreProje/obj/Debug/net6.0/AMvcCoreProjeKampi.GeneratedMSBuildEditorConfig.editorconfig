@@ -16,6 +16,46 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Areas/Admin/Views/AdminBlog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5CbG9nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Areas/Admin/Views/AdminComment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Db21tZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Areas/Admin/Views/AdminMessage/ComposeMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5NZXNzYWdlXENvbXBvc2VNZXNzYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Areas/Admin/Views/AdminMessage/Inbox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5NZXNzYWdlXEluYm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Areas/Admin/Views/AdminMessage/SendBox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5NZXNzYWdlXFNlbmRCb3guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Areas/Admin/Views/AdminRole/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlXEFkZFJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Areas/Admin/Views/AdminRole/AssignRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlXEFzc2lnblJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Areas/Admin/Views/AdminRole/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Areas/Admin/Views/AdminRole/UpdateRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlXFVwZGF0ZVJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Areas/Admin/Views/AdminRole/UserRoleList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlXFVzZXJSb2xlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Areas/Admin/Views/Blog/BlogTitleListExcel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xCbG9nVGl0bGVMaXN0RXhjZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -116,6 +156,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Views/Login/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQWNjZXNzRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -128,12 +172,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxNZXNzYWdlRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Views/Message/SendBox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxTZW5kQm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Views/Message/SendMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxTZW5kTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Views/NewsLetter/SubscribeMail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c0xldHRlclxTdWJzY3JpYmVNYWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Views/Notification/AllNotification.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXEFsbE5vdGlmaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Views/RegisterUser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJVc2VyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/e_mur/source/repos/MvcCoreProje/1-McvCoreProje/Views/Register/Index.cshtml]

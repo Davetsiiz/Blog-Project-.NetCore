@@ -4,6 +4,7 @@ using Data_AccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.AspNetCore;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using X.PagedList;
@@ -11,6 +12,7 @@ using X.PagedList;
 namespace AMvcCoreProjeKampi.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin, Moderator")]
     public class CategoryController : Controller
     {
         CategoryManager cm = new CategoryManager(new EfCategoryDal());

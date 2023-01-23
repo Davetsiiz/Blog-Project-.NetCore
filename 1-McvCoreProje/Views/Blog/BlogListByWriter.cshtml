@@ -24,14 +24,16 @@
                 </tr>
                 @foreach (var item in Model)
                 {
-
+                    string scla = "";
                     string sta = "";
                     if (item.BlogStatus == true)
                     {
+                        scla = "badge badge-success";
                         sta = "Aktif";
                     }
                     else if (item.BlogStatus == false)
                     {
+                        scla = "badge badge-danger";
                         sta = "Pasif";
                     }
                     else
@@ -60,7 +62,7 @@
                         <td>@item.BlogTitle</td>
                         <td>@(((DateTime)item.BlogDate).ToString("dd.MM.yyyy"))</td>
                         <td><span style="@renk"><u>@item.Category.CategoryName</u></span></td>
-                        <td>@sta</td>
+                        <td><span class="@scla">@sta</span></td>
                         <td><a href="/Blog/BlogDelete/@item.BlogId" class="btn btn-danger" onclick="return confirm('Bu bloğu silmek istediğinize emin misiniz?');">Sil</a></td>
                         <td><a href="/Blog/BlogEdit/@item.BlogId" class="btn btn-info">Düzenle</a></td>
                     </tr>

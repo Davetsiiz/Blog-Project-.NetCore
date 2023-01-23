@@ -14,5 +14,6 @@ namespace BusinessLayer.Abstract
         void CommentyUpdate(Comment comment);
         List<Comment> CommentListAll(int id);
         Comment CommentGetById(int id);
+        List<Comment> GetCommentWithBlog();
     }
 }

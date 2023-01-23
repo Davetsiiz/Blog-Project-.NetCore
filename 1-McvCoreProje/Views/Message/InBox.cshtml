@@ -58,8 +58,8 @@
                         {
                             renk = "color:blueviolet;";
                         }
-                        <tr >
-                            <td >@item.MessageId</td>
+                        <tr>
+                            <td>@item.MessageId</td>
                             <td><img src="@item.SenderUser.WriterImage"></img></td>
                             <td>@item.Subject</td>
                             <td>@(((DateTime)item.MessageDate).ToString("dd.MM.yyyy"))</td>
@@ -72,5 +72,13 @@
                 </tbody>
             </table>
         </div>
+    </div>
+</div>
+<div>
+    <div>
+        <a href="/Message/SendMessage/" class="btn btn-primary">Yeni Mesaj</a>
+    </div>
+    <div>
+        <a href="/Message/SendBox/" class="btn btn-secondary">Gönderilen Mesajlar</a>
     </div>
 </div>

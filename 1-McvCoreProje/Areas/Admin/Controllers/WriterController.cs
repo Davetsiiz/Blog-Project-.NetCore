@@ -1,10 +1,12 @@
 ﻿using AMvcCoreProjeKampi.Areas.Admin.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace AMvcCoreProjeKampi.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin, Moderator")]
     public class WriterController : Controller
     {
         public IActionResult Index()

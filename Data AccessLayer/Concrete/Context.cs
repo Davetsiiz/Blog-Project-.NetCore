@@ -4,11 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data_AccessLayer.Concrete
 {
-    public class Context:IdentityDbContext
+    public class Context:IdentityDbContext<AppUser,AppRole,int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-HKAH8F2;Initial Catalog=CoreMVCKampProjeDB;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-HKAH8F2;Initial Catalog=DenemeDb;Integrated Security=True");
+
+            //CoreMVCKampProjeDB
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

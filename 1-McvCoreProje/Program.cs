@@ -1,9 +1,15 @@
+using Data_AccessLayer.Concrete;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddDbContext<Context>();
+builder.Services.AddIdentity<AppUser, AppRole>(x =>{
+    x.Password.RequireUppercase = false;
+    x.Password.RequireNonAlphanumeric = false;
+}).AddEntityFrameworkStores<Context>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -11,6 +17,7 @@ builder.Services.AddControllersWithViews();
 //{
 //    services.AddControllersWithViews();
 //}
+
 
 builder.Services.AddMvc(config =>
 
@@ -32,6 +39,14 @@ builder.Services.AddAuthentication(
     {
         x.LoginPath = "/Login/Index";
     });
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(100);
+    options.AccessDeniedPath = new PathString("/Login/AccessDenied/");
+    options.LoginPath = "/Login/Index/";
+    options.SlidingExpiration = true;
+});
 
 
 var app = builder.Build();
@@ -64,7 +79,7 @@ app.UseEndpoints(endpoints =>
             );
     endpoints.MapControllerRoute(
         name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}");
+        pattern: "{controller=BLog}/{action=Index}/{id?}");
 
 });
 

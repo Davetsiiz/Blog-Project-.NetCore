@@ -47,5 +47,9 @@ namespace BusinessLayer.Concrete
         {
             _message2Dal.Update(t);
         }
+        public List<Message2> GetSendboxListByWriter(int id)
+        {
+            return _message2Dal.GetSendboxWithMessageByWriter(id);
+        }
     }
 }

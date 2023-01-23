@@ -1,10 +1,12 @@
 ﻿using BusinessLayer.Concrete;
 using Data_AccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _1_McvCoreProje.Controllers
 {
+    [AllowAnonymous]
     public class CommentController : Controller
     {
         CommentManager cmm = new CommentManager(new EfCommentDal());

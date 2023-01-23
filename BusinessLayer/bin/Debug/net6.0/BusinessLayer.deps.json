@@ -1417,6 +1417,7 @@
         "dependencies": {
           "ClosedXML": "0.100.3",
           "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.12",
           "Microsoft.EntityFrameworkCore": "6.0.12",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.12",
           "bootstrap": "4.6.1"

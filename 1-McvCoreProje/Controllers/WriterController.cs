@@ -7,6 +7,7 @@ using EntityLayer.Concrete;
 using FluentValidation.Internal;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AMvcCoreProjeKampi.Controllers
@@ -15,12 +16,19 @@ namespace AMvcCoreProjeKampi.Controllers
     {
         Context c=new Context();
         WriterManager wm = new WriterManager(new EfWriterDal());
+        private readonly UserManager<AppUser> _userManager;
+
+        public WriterController(UserManager<AppUser> userManager)
+        {
+            _userManager = userManager;
+        }
+
         [Authorize]
         public IActionResult Index()
         {
             var usermail=User.Identity.Name;
             ViewBag.v = usermail;
-            Context c = new Context();
+           
             var writername = c.writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterName).FirstOrDefault();
             ViewBag.v2 = writername;
             return View();
@@ -46,33 +54,48 @@ namespace AMvcCoreProjeKampi.Controllers
         }
        
         [HttpGet]
-        public IActionResult WriterEditProfile()
+        public async Task<IActionResult> WriterEditProfile()
         {
-            var usermail = User.Identity.Name;
-            var writerID = c.writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
-            var writervalues = wm.TGetById(writerID);
-            return View(writervalues);
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            UserUpdateViewModel model = new UserUpdateViewModel();
+            model.mail = values.Email;
+            model.namesurname = values.NameSurname;
+            model.imageurl = values.ImageUrl;
+            model.username = values.UserName;
+            return View(model);
         }
      
         [HttpPost]
-        public IActionResult WriterEditProfile(Writer p)
+        public async Task<IActionResult> WriterEditProfile(UserUpdateViewModel model)
         {
-            WriterValidator wv = new WriterValidator();
-            ValidationResult results = wv.Validate(p);
-            if (results.IsValid)
-            {
-                p.WriterImage = "/CoreBlogTema/web/images/5.jpg";
-                wm.TUpdate(p);
-                return RedirectToAction("Index", "Dashboard");
-            }
-            else
-            {
-                foreach (var item in results.Errors)
-                {
-                    ModelState.AddModelError(item.PropertyName,item.ErrorMessage);
-                }
-            }
-            return View();
+
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            values.NameSurname = model.namesurname;
+            values.ImageUrl = model.imageurl;
+            values.Email = model.mail;
+            values.PasswordHash = _userManager.PasswordHasher.HashPassword(values, model.password);
+            var result = await _userManager.UpdateAsync(values);
+            return RedirectToAction("Index", "Dashboard");
+
+
+
+
+            //WriterValidator wv = new WriterValidator();
+            //ValidationResult results = wv.Validate(p);
+            //if (results.IsValid)
+            //{
+            //    p.WriterImage = "/CoreBlogTema/web/images/5.jpg";
+            //    wm.TUpdate(p);
+            //    return RedirectToAction("Index", "Dashboard");
+            //}
+            //else
+            //{
+            //    foreach (var item in results.Errors)
+            //    {
+            //        ModelState.AddModelError(item.PropertyName,item.ErrorMessage);
+            //    }
+            //}
+            //return View();
         }
         [AllowAnonymous]
         [HttpGet]
@@ -103,5 +126,6 @@ namespace AMvcCoreProjeKampi.Controllers
             wm.TAdd(w);
             return RedirectToAction("Index", "Dashboard");
         }
+       
     }
 }

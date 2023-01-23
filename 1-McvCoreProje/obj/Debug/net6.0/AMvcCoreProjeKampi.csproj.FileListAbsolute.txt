@@ -288,15 +288,6 @@ C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\Irony.d
 C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\SixLabors.Fonts.dll
 C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\System.IO.Packaging.dll
 C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\XLParser.dll
-C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\BlogApiDemo.deps.json
-C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\BlogApiDemo.runtimeconfig.json
-C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\BlogApiDemo.exe
-C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\Microsoft.OpenApi.dll
-C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\BlogApiDemo.dll
-C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\BlogApiDemo.pdb
 C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\e_mur\source\repos\MvcCoreProje\1-McvCoreProje\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

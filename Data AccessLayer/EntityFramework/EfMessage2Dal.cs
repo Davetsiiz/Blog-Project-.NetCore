@@ -19,5 +19,13 @@ namespace Data_AccessLayer.EntityFramework
                 return c.messages2.Include(b => b.SenderUser).Where(x => x.ReceiverID == id).ToList();
             }
         }
+
+        public List<Message2> GetSendboxWithMessageByWriter(int id)
+        {
+            using (var c = new Context())
+            {
+                return c.messages2.Include(x => x.RecieverUser).Where(x => x.SenderID == id).ToList();
+            }
+        }
     }
 }

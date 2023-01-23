@@ -1,10 +1,12 @@
 ﻿using BusinessLayer.Concrete;
 using Data_AccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AMvcCoreProjeKampi.Controllers
 {
+	[AllowAnonymous]
 	public class ContactController : Controller
 	{
 		ContactManager cm = new ContactManager(new EfContactDal());

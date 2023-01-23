@@ -12,19 +12,21 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace _1_McvCoreProje.Controllers
 {
-    [AllowAnonymous]
+    
     public class BlogController : Controller
         
     {
         BlogManager bm = new BlogManager(new EfBlogDal());
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
         Context c = new Context();
-        public IActionResult Index()
+		[AllowAnonymous]
+		public IActionResult Index()
         {
             var values=bm.GetBlogListWithCategory();
             return View(values);
         }
-        public IActionResult BlogReadAll(int id)
+		[AllowAnonymous]
+		public IActionResult BlogReadAll(int id)
         {
             ViewBag.i = id;
             var values=bm.GetBlogByID(id);
@@ -33,9 +35,10 @@ namespace _1_McvCoreProje.Controllers
 
         public IActionResult BlogListByWriter()
         {
-            var usermail = User.Identity.Name;
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
             var writerID = c.writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
-            var values=bm.GetListWithCategoryByWriterBm(writerID);
+            var values = bm.GetListWithCategoryByWriterBm(writerID);
             return View(values);
 
         }
@@ -55,30 +58,33 @@ namespace _1_McvCoreProje.Controllers
         [HttpPost]
         public IActionResult BlogAdd(Blog p)
         {
-            var usermail = User.Identity.Name;
-            var writerID = c.writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
-            BlogValidator bv= new BlogValidator();
-            ValidationResult results= bv.Validate(p);
-            List<SelectListItem> categoryvalue = (from x in cm.GetList()
+            List<SelectListItem> categoryvalues = (from x in cm.GetList()
                                                   select new SelectListItem
                                                   {
                                                       Text = x.CategoryName,
                                                       Value = x.CategoryId.ToString()
                                                   }).ToList();
-            ViewBag.cv = categoryvalue;
-            if (results.IsValid)
+            ViewBag.cv = categoryvalues;
+
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
+            var writerID = c.writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
+
+            BlogValidator bv = new BlogValidator();
+            ValidationResult result = bv.Validate(p);
+
+            if (result.IsValid)
             {
-                p.BlogTumbnailImage = "Yok";
-                p.BlogDate = DateTime.Parse(DateTime.Now.ToString());
                 p.BlogStatus = true;
+                p.BlogDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 p.WriterID = writerID;
-                
+                p.BlogTumbnailImage = p.BlogImage;
                 bm.TAdd(p);
                 return RedirectToAction("BlogListByWriter", "Blog");
             }
             else
             {
-                foreach (var item in results.Errors)
+                foreach (var item in result.Errors)
                 {
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
@@ -107,14 +113,13 @@ namespace _1_McvCoreProje.Controllers
         [HttpPost]
         public IActionResult BlogEdit(Blog p,int id)
         {
-            var usermail = User.Identity.Name;
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
             var writerID = c.writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
-            var blogvalue = bm.TGetById(id);
-            p.WriterID = writerID; 
+            p.WriterID = writerID;
             p.BlogStatus = true;
-            p.BlogDate = blogvalue.BlogDate;
             bm.TUpdate(p);
-            return RedirectToAction("BlogListByWriter");
+            return RedirectToAction("BlogListByWriter"); ;
         }
     }
 }
